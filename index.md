@@ -10,4 +10,4 @@ This is a master listing of pages with specific notes. Read about:
 
 * [(WebFaction) servers](notes/servers.md)
 * [GitHub source codebases & data stores](notes/github.md)
-* [WordPress website](notes/wordpress.md)
+* [(WordPress) website](notes/wordpress.md)

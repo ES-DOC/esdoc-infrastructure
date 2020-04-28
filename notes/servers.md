@@ -11,12 +11,16 @@ These notes cover *the WebFaction servers*, namely:
 * how they are setout, organised & managed;
 * how they are deployed.
 
+* *Note*: preferably, eventually, we will move away from WebFaction, since
+  while it does some things well e.g. the UI and its Dashboard is useful, it
+  is not ideal, for example the web servers are shared which is undesirable.
+
 
 ## The basics
 
 * WebFaction is an internet service. We rent two machines off them as:
-  * a production server;
-  * a test server.
+  * a production server (identified by the number <redacted, ask SB>);
+  * a test server (ditto by <redacted, ask SB>).
 
 * Each is ~ 1GB (in RAM).
 
@@ -45,7 +49,7 @@ These notes cover *the WebFaction servers*, namely:
   * `pid_sync_handler.py` script.
 
 
-### Databases
+### Databases & storage
 
 * We use five different databases (DB) in total (see 'Databases' tab in the
   UI):
@@ -58,11 +62,18 @@ These notes cover *the WebFaction servers*, namely:
   we should not have to touch the PostgreSQL databases apart from during
   deployment (at least for the moment, we are trying to get that automated).
 
+* The PostgreSQL databases are "fairly well normalised" [?].
+
 * Some of the documentation itself is stored on GitHub in specific
-  repositories, because they are ~8.60 MB so quite small & on GitHub can be
-  kept compact & quick-to-access. But a documentation DB (per server) is
-  also used. In contrast, all errata is stored in the databases rather than
-  on GitHub.
+  repositories, because it totals ~8.6 MB so is quite small & on GitHub can
+  be kept compact & quick-to-access. But a documentation DB (per
+  server) is also used. Notably:
+  * the CIM documents are all stored in the `ES-DOC/esdoc-archive` repo on
+    GitHub;
+  * but all errata is stored in the databases.
+
+* We have pointers to the GitHub repositories so we can pull down any
+  required content, in either JSON, HTML or XML format.
 
 * There are two consumers of the databases: 
   * `owner`: has full access, including deletion privileges & the ability
@@ -79,6 +90,14 @@ These notes cover *the WebFaction servers*, namely:
   of relevant people & we use it for example to blanket email all of the
   project liasons with updates.
 
+* We don't use the Webmail service provided.
+
+
+### Security
+
+* SSL certificates have been setup and are managed by CNRS (Le Centre
+  National de la Recherche Scientifique). They are renewed annually.
+
 
 ### Domains & websites
 
@@ -88,7 +107,8 @@ These notes cover *the WebFaction servers*, namely:
   * domains, i.e. URLs;
   * websites, i.e. applications.
 
-* The domains are mapped onto the websites.
+* The domains are mapped onto the websites to produce the physical overall
+  website.
 
 
 #### The domains/URLs
@@ -137,10 +157,11 @@ These notes cover *the WebFaction servers*, namely:
     *`test_` or `prod_` to specify the applicable server;
   * **sub-prefixes** (optional):
     * `fe_`: implies *just a Javascipt application* i.e. it has no associated
-      HTML, such that all the content is created via JS using Vue.js;
-    * `ws_`: 
-    * `wordpress_`:
-  * **suffixes** (optional):
+      HTML, such that all the content is created via JS using Vue.js
+      (previously Backbone.js was used, but we moved to Vue);
+    * `ws_`: a webservice, which uses Python & Tornado (see above);
+    * `wordpress_`: the wordpress sites;
+  * **suffixes** (optional, i.e. the primary domain has no suffix):
     *`_http`: (all run via SSL but) this re-routes from `http` to the
       corresponding `https` domain. This enables us to always route to the
       encrypted i.e. HTTPS equivalent, for security.
@@ -180,6 +201,9 @@ These notes cover *the WebFaction servers*, namely:
 
 
 #### SSH access
+
+* Only users who have been added to the list permitting ssh access will be
+  able to `ssh` into the servers.
 
 * A designated ES-DOC development environment has been designed and setup.
   All core developers should use it to facilitate collaboration.
@@ -319,6 +343,11 @@ $ ls
   example to push new content after its creation by an institute.
 
 
+### Misc.
 
+* We don't use the 'Affiliate Program', an opt-in scheme to potentially earn
+  money based on site traffic.
 
-
+* We rarely have need to use the official support from WebFaction (see
+  the 'Support' tab in the UI). MG [as of a Telco on 13/02/20] has only had
+  use the support services ~4 times.
