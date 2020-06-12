@@ -8,7 +8,8 @@ as an aid to share knwoledge & practice amongst the ES-DOC developers.**
 
 This is a master listing of pages with specific notes. Read about:
 
+* [ES-DOC as a project](notes/project.md)
+* [Architecture including workflows](notes/architecture.md)
 * [(WebFaction) servers](notes/servers.md)
 * [(WordPress) website](notes/wordpress.md)
-* [GitHub source codebases & data stores](notes/github.md)
-* [Ecosystem workflows](notes/workflows.md)
+* [GitHub repository ecosystem](notes/github.md)
