@@ -15,7 +15,7 @@ consolidates the web applications and maps them onto domains. The software
 ecosystem and further stores contained in GitHub repositories under the
 ‘ES-DOC' organisation enables content pushed by modelling institutes to
 repositories under another organisation, ‘ES-DOC-INSTITUTIONAL’, to be
-processed into CIM2 documents, stored, and displayed on the Wordpress website
+processed into CIM2 documents, stored, and displayed on the WordPress website
 for discovering, viewing and comparing.
 
 The back-end software stack comprises several Python-based utility libraries
@@ -254,7 +254,7 @@ CIM documents which are published and ingested, is automated using the
 ES-DOC shell and cron jobs to define and schedule updates, respectively.
 
 The alternative pathway to content provision and document creation is
-bespoke to the documentation of enembles of CMIP6 simulations, and is an
+bespoke to the documentation of ensembles of CMIP6 simulations, and is an
 automated process that derives the documentation from netCDF files during
 the ESGF publication phase. This is the lowermost path shown in **(1b)**.
 

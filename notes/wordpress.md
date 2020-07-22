@@ -44,7 +44,7 @@ tutorials & documentation available online to cover WordPress in general.
   * The "1, 2, 3, 4" graphic (the one found at the foot of
     [this page](https://es-doc.org/cmip6/)) is "probably the most important
     graphic on the site".
-  * There are some techincal screencasts are on there too.
+  * There are some technical screencasts are on there too.
 
 * The CMIP6 "microsite" is the main part of the whole site at present.
 

@@ -1,7 +1,7 @@
 # ES-DOC Infrastructure Documentation
 
 **Documentation on the technical underpinning of the ES-DOC project. Designed
-as an aid to share knwoledge & practice amongst the ES-DOC developers.**
+as an aid to share knowledge & practice amongst the ES-DOC developers.**
 
 
 ## Pages

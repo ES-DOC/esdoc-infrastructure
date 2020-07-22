@@ -58,7 +58,7 @@ These notes cover *the WebFaction servers*, namely:
     * the errata;
     * the documentation.
 
-* We rarely, if at all, need to touch the MySQL Wordpress-related DB, and
+* We rarely, if at all, need to touch the MySQL WordPress-related DB, and
   we should not have to touch the PostgreSQL databases apart from during
   deployment (at least for the moment, we are trying to get that automated).
 
@@ -86,11 +86,11 @@ These notes cover *the WebFaction servers*, namely:
 
 * There are various email accounts associated with the WebFaction account.
 
-* There are also a numebr of email lists: you can use WebMail to create lists
+* There are also a number of email lists: you can use WebMail to create lists
   of relevant people & we use it for example to blanket email all of the
-  project liasons with updates.
+  project liaisons with updates.
 
-* We don't use the Webmail service provided.
+* We don't use the WebMail service provided.
 
 
 ### Security
@@ -132,7 +132,7 @@ These notes cover *the WebFaction servers*, namely:
 
 * There are some core prefixes: for the domain names:
   * `test_`: all test server domains are prefixed with this;
-  * `stats_`: these are domains configued to collect analytics (mainly
+  * `stats_`: these are domains configured to collect analytics (mainly
     towards IS-ENES3 reports, otherwise we don't use these analytics much).
 
 * Domains are easy to set-up, but the important thing is how they are
@@ -152,11 +152,11 @@ These notes cover *the WebFaction servers*, namely:
   allocates a port via WebFaction.
 
 * The websites are organised so that they may have one of several prefixes,
-  subprefixes, & suffixes:
+  sub-prefixes, & suffixes:
   * **prefixes**:
     *`test_` or `prod_` to specify the applicable server;
   * **sub-prefixes** (optional):
-    * `fe_`: implies *just a Javascipt application* i.e. it has no associated
+    * `fe_`: implies *just a JavaScript application* i.e. it has no associated
       HTML, such that all the content is created via JS using Vue.js
       (previously Backbone.js was used, but we moved to Vue);
     * `ws_`: a webservice, which uses Python & Tornado (see above);
@@ -339,7 +339,7 @@ $ ls
   (to those in the example above) exist for other repos. Look at the `sh/`
   sub-repo for any repo to see these shell scripts.
 
-* There are also commands to manage the instsitutional repositories, for
+* There are also commands to manage the institutional repositories, for
   example to push new content after its creation by an institute.
 
 
